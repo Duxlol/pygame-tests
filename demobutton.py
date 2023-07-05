@@ -7,12 +7,12 @@ SCREEN_HEIGHT = 720
 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Dux' bomb")
+icon = pygame.image.load(r'./images/skull.png')
+pygame.display.set_allow_screensaver()
+pygame.display.set_icon(icon)
 run = True
 
-# Load the player image
 player_image = pygame.image.load('./images/smallloafy-circle.png')
-
-# Set the initial position of the player image
 player_image_rect = player_image.get_rect()
 player_image_rect.topleft = (300, 250)
 
@@ -101,14 +101,7 @@ class Button:
     def check_collision(self, player_rect):
         return self.rect.colliderect(player_rect)
 
-button1 = Button(
-    "X",
-    (1221, 7),
-    font=35,
-    bg="red",
-    hover_bg="darkred",
-    feedback="Closed window!"
-)
+button1 = Button("X",(1221, 7),font=35,bg="red",hover_bg="darkred",feedback="Closed window!")
 
 def keyHandler():
     key = pygame.key.get_pressed()
