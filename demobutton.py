@@ -45,10 +45,10 @@ class keystrokes:
 
     # Set the positions for the key images
     key_positions = {
-        'W': (100, 100),
-        'A': (200, 100),
-        'S': (300, 100),
-        'D': (400, 100)
+        'W': (100, 25),
+        'A': (25, 100),
+        'S': (100, 100),
+        'D': (175, 100)
     }
 
     @staticmethod
